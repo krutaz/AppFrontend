@@ -1,0 +1,76 @@
+html{
+	font-family: 'Gemunu Libre', sans-serif;
+	background-color: #000;
+	background-image: url("pacman-ghosts.jfif");
+	background-position: center;
+}
+
+header{
+	background-color: #000;
+	color: #fff;
+	padding: 3rem 2rem;
+	font-size: 4rem;
+}
+
+body{
+	margin: 0 auto;
+}
+
+.t-container {
+  margin: 0 auto;
+  padding: 0; 
+}
+.t-tabs, .t-contents {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 2% 0 2%;
+  box-sizing: border-box;
+  
+}
+.t-tabs li {
+  color: #FFFFFF;
+  padding: 0.5em 0.7em;
+  text-decoration: none;
+  float: left;
+  text-align: center;
+  font-size: 2.5em;
+  background: #ACACAC;
+  border-bottom: 0;
+  min-width: 40px;
+  margin-right: 3%;
+  margin-bottom: 0 !important;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.t-tabs li:hover {
+  transition: background 0.3s ease;
+  background-color: #545454;
+  color: #d2d2d2;
+}
+.t-tabs li.selected {
+  color: #458ace;
+  cursor: default;
+  background: #333;
+}
+.t-contents {
+  padding: 0 !important;
+}
+.t-content {
+  padding: 0 1em;
+  background-color: #333;
+  box-sizing: border-box;
+  float: left;
+  width: 100%;
+  color: #b7b7b7;
+  line-height: 1.3em;
+  text-align: justify;
+  z-index: 1;
+  position: relative;
+  max-height: 0;
+  transition: max-height 0.5s ease 0s;
+  overflow: hidden;
+}
+.t-content.selected {
+  max-height: 3000px;
+  transition: max-height 1.25s ease 0.5s;
+}
