@@ -19,7 +19,8 @@ header{
 }
 
 input{
-	font-size: 2rem;	
+	font-size: 2rem;
+	border-radius: 5px;
 }
 
 label{
@@ -35,6 +36,7 @@ button{
 	font-family: 'Gemunu Libre', sans-serif;
 	margin: 125px;
 	font-size: 2rem;
+	border-radius: 5px;
 }
 
 button:hover{

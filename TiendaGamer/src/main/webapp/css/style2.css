@@ -20,6 +20,7 @@ body{
   margin: 0 auto;
   padding: 0; 
 }
+
 .t-tabs, .t-contents {
   list-style-type: none;
   margin: 0;
@@ -34,7 +35,7 @@ body{
   float: left;
   text-align: center;
   font-size: 2.5em;
-  background: #ACACAC;
+/*   background: #ACACAC; */
   border-bottom: 0;
   min-width: 40px;
   margin-right: 3%;
@@ -42,11 +43,13 @@ body{
   box-sizing: border-box;
   cursor: pointer;
 }
+
 .t-tabs li:hover {
   transition: background 0.3s ease;
   background-color: #545454;
   color: #d2d2d2;
 }
+
 .t-tabs li.selected {
   color: #458ace;
   cursor: default;
@@ -55,6 +58,7 @@ body{
 .t-contents {
   padding: 0 !important;
 }
+
 .t-content {
   padding: 0 1em;
   background-color: #333;
@@ -70,6 +74,7 @@ body{
   transition: max-height 0.5s ease 0s;
   overflow: hidden;
 }
+
 .t-content.selected {
   max-height: 3000px;
   transition: max-height 1.25s ease 0.5s;
