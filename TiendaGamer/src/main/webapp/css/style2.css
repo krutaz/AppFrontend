@@ -16,6 +16,29 @@ body{
 	margin: 0 auto;
 }
 
+input{
+	font-size: 2rem;
+	border-radius: 5px;
+}
+
+label{
+	margin: 0 60px;
+}
+
+button{
+	font-family: 'Gemunu Libre', sans-serif;
+	padding: 0 60px;
+	margin: 200px 60px;
+	font-size: 3rem;
+	border-radius: 5px;
+}
+
+button:hover{
+	transition: background 0.3s ease;
+	background: #aaa;
+	cursor: pointer;
+}
+
 .t-container {
   margin: 0 auto;
   padding: 0; 
@@ -73,6 +96,8 @@ body{
   max-height: 0;
   transition: max-height 0.5s ease 0s;
   overflow: hidden;
+  font-size: 3em;
+  margin: 0 auto;
 }
 
 .t-content.selected {
