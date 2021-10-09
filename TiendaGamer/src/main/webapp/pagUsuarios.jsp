@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<%@ page import='java.util.Date' %>
-<%@ page import='co.edu.unbosque.tiendagamer.Usuarios' %>
-<%@ page import='java.util.ArrayList' %>
+<%@ page import='java.util.Date'%>
+<%@ page import='co.edu.unbosque.tiendagamer.Usuarios'%>
+<%@ page import='java.util.ArrayList'%>
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>tienda generica</title>
+		<title>Listado</title>
 	</head>
 <body>
 	<p>LISTADO DE USUARIOS</p>
 	<p>Hora servidor es<%=new Date()%></p>
 	<table>
 		<tr>
-			<td><label>Cedula</label></td>
+			<td><label>Cédula</label></td>
 			<td><label>Nombre</label></td>
 			<td><label>Correo</label></td>
 			<td><label>Usuario</label></td>
@@ -23,7 +23,7 @@
 		
 		<%
 		ArrayList<Usuarios> lista = (ArrayList<Usuarios>) request.getAttribute("lista");
-		for (Usuarios usuario : lista){
+		for (Usuarios usuario : lista) {
 		%>
 		<tr>
 			<td><%=usuario.getCedula_usuario()%></td>

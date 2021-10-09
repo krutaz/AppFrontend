@@ -1,16 +1,17 @@
 package co.edu.unbosque.tiendagamer;
 
 public class Usuarios {
-	private String cedula_usuario;
+	
+	private long cedula_usuario;
 	private String nombre_usuario;
 	private String email_usuario;
 	private String usuario;
 	private String password;
 	
-	public String getCedula_usuario() {
+	public long getCedula_usuario() {
 		return cedula_usuario;
 	}
-	public void setCedula_usuario(String cedula_usuario) {
+	public void setCedula_usuario(long cedula_usuario) {
 		this.cedula_usuario = cedula_usuario;
 	}
 	public String getNombre_usuario() {

@@ -24,7 +24,8 @@ input{
 }
 
 label{
-	font-size: 3rem;	
+	font-size: 3rem;
+	float: left;	
 }
 
 table{
