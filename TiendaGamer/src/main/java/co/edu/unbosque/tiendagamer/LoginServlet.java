@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class TiendaGamerServler
  */
-@WebServlet("/TiendaGamerServlet")
+@WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -55,9 +55,13 @@ public class LoginServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String ing = request.getParameter("ingresar");
-		if(ing.equals("Ingresar")) {
+		String usu = request.getParameter("usuario");
+		String con = request.getParameter("password");
+		if(ing.equals("Ingresar") && !usu.isEmpty() && !con.isEmpty()) {
 			this.validarUsuario(request, response);
-		}		
+		} else {
+			request.getRequestDispatcher("/errorPage.jsp").forward(request, response);
+		}
 	}
 
 	/**

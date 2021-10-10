@@ -31,6 +31,6 @@
 		</form>
 		<!-- Agregar correos de todos para referencia -->
 		<a href="mailto:heavy_juan@hotmail.com, daniel097345@gmail.com">Correos de contacto aquí</a>
-		<p>Copyright© 2021, Juan Solano, Hector Anzola, Axel Muñoz, Daniel barbosa, Hitam</p>
+		<p>Copyright© 2021, Juan Solano, Hector Anzola, Axel Muñoz, Daniel barbosa, Hitam Howard</p>
 	</body>
 </html>

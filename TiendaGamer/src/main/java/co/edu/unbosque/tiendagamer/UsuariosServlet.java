@@ -2,9 +2,7 @@ package co.edu.unbosque.tiendagamer;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,22 +38,9 @@ public class UsuariosServlet extends HttpServlet {
     		if (respuesta == 200) {
     			writer.println("Usuario creado");
     		} else {
-    			request.getRequestDispatcher("/errorPage.jsp").forward(request, response);
+    			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
     		}
 		} catch (IOException e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-    }
-    
-    public void consultarUsuarios(HttpServletRequest request, HttpServletResponse response) { 
-    	try {
-			ArrayList<Usuarios> lista = UsuariosJSON.getJSON();
-			String pagina = "/pagUsuarios.jsp";
-			request.setAttribute("lista", lista);
-			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
-			dispatcher.forward(request, response);
-		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
@@ -75,7 +60,7 @@ public class UsuariosServlet extends HttpServlet {
     		if (respuesta == 200) {
     			writer.println("Usuario actualizado");
     		} else {
-    			request.getRequestDispatcher("/errorPage.jsp").forward(request, response);
+    			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
     		}
 		} catch (IOException e) {
 			// TODO: handle exception
@@ -84,16 +69,16 @@ public class UsuariosServlet extends HttpServlet {
     }
     
     public void eliminarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
-    	Usuarios usuario = new Usuarios();
-    	usuario.setCedula_usuario(Long.parseLong(request.getParameter("cedula")));
+    	Long id = Long.parseLong(request.getParameter("cedula"));
     	int respuesta = 0;
     	try {
-    		respuesta = UsuariosJSON.deleteJSON(usuario.getCedula_usuario());
+    		respuesta = UsuariosJSON.deleteJSON(id);
     		PrintWriter writer = response.getWriter();
+    		writer.println(respuesta);
     		if (respuesta == 200) {
     			writer.println("Usuario eliminado");
     		} else {
-    			request.getRequestDispatcher("/errorPage.jsp").forward(request, response);
+    			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
     		}
 		} catch (IOException e) {
 			// TODO: handle exception
@@ -106,24 +91,30 @@ public class UsuariosServlet extends HttpServlet {
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String consul = request.getParameter("consultar");
 		String crear = request.getParameter("crear");
 		String actua = request.getParameter("actualizar");
 		String elimi = request.getParameter("eliminar");
-		if (crear != null) {
+		String nom = request.getParameter("nombre");
+		String ced = request.getParameter("cedula");
+		String ema = request.getParameter("email");
+		String usu = request.getParameter("usuario");
+		String con = request.getParameter("password");
+		if (crear != null && !usu.isEmpty() && !con.isEmpty() && !ema.isEmpty() && !nom.isEmpty() && !ced.isEmpty()) {
 			crearUsuario(request, response);
-		}
+		} else {
+			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
+		}		
 		
-		if (consul != null) {
-			consultarUsuarios(request, response);
-		}
-		
-		if (actua != null) {
+		if (actua != null && !usu.isEmpty() && !ced.isEmpty()) {
 			actualizarUsuario(request, response);
+		} else {
+			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
 		}
 		
-		if (elimi != null) {
+		if (elimi != null && !ced.isEmpty()) {
 			eliminarUsuario(request, response);
+		} else {
+			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
 		}
 	}
 

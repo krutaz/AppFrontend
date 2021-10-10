@@ -51,7 +51,6 @@
 				    	</tbody>
 				    	<tfoot>
 				    		<tr>
-								<td><button name="consultar" value="consultar">Consultar</button></td>
 								<td><button name="crear" value="crear">Crear</button></td>
 								<td><button name="actualizar" value="actualizar">Actualizar</button></td>
 								<td><button name="eliminar" value="eliminar">Borrar</button></td>
@@ -62,21 +61,21 @@
 			    </form>			    
 		    </li>
 		    <li class="t-content">
-		    	<form method="get" action="./ClientesServlet">
+		    	<form method="get" action="">
 			    	<table>
 			    		<thead></thead>
 			    		<tbody>
 				    		<tr>
-				    			<td><label for="cedula">Cédula:</label></td>
-				    			<td><input type="number" name="cedula" id="cedula"></td>
+				    			<td><label for="cedula2">Cédula:</label></td>
+				    			<td><input type="number" name="cedula2" id="cedula2"></td>
 				    			<td><label for="telefono">Teléfono:</label></td>
 				    			<td><input type="number" name="telefono" id="telefono"></td>
 				    		</tr>
 				    		<tr>
-				    			<td><label for="nombre">Nombre Completo:</label></td>
-				    			<td><input name="nombre" id="nombre"></td>
-				    			<td><label for="correo">Correo Electrónico:</label></td>
-				    			<td><input name="email" id="correo"></td>
+				    			<td><label for="nombre2">Nombre Completo:</label></td>
+				    			<td><input name="nombre2" id="nombre2"></td>
+				    			<td><label for="correo2">Correo Electrónico:</label></td>
+				    			<td><input name="email" id="correo2"></td>
 				    		</tr>
 				    		<tr>
 				    			<td><label for="direccion">Dirección:</label></td>
@@ -103,8 +102,8 @@
 				    		<tr>
 				    			<td><label for="nit">NIT:</label></td>
 				    			<td><input name="nit" id="nit"></td>
-				    			<td><label for="telefono">Teléfono:</label></td>
-				    			<td><input name="telefono" id="telefono"></td>
+				    			<td><label for="telefono2">Teléfono:</label></td>
+				    			<td><input name="telefono2" id="telefono2"></td>
 				    		</tr>
 				    		<tr>
 				    			<td><label for="nombreP">Nombre Proveedor:</label></td>
@@ -113,13 +112,13 @@
 				    			<td><input name="ciudad" id="ciudad"></td>
 				    		</tr>
 				    		<tr>
-				    			<td><label for="direccion">Dirección:</label></td>
-				    			<td><input name="direccion" id="direccion"></td>
+				    			<td><label for="direccion2">Dirección:</label></td>
+				    			<td><input name="direccion2" id="direccion2"></td>
 				    		</tr>
 				    	</tbody>
 			    		<tfoot>
 				    		<tr>
-								<td><button name="consultar" value="consultar">Consultar</button></td>
+				    			<td><button name="consultar" value="consultar">Consultar</button></td>
 								<td><button name="crear" value="crear">Crear</button></td>
 								<td><button name="actualizar" value="actualizar">Actualizar</button></td>
 								<td><button name="borrar" value="eliminar">Borrar</button></td>
@@ -154,8 +153,8 @@
 		    		<table>
 		    			<thead>
 			    			<tr>
-			    				<td><label for="cedula">Cédula:</label></td>
-			    				<td><input name="cedula" id="cedula"></td>
+			    				<td><label for="cedula3">Cédula:</label></td>
+			    				<td><input name="cedula3" id="cedula3"></td>
 			    				<td><button name="consultar" value="consultar">Consultar</button></td>
 			    				<td><label>Cliente:</label></td>
 			    				<td><input name="nombre"></td>
@@ -220,21 +219,23 @@
 		    	</form>
 		    </li>
 		    <li class="t-content">
-		    	<table>
-		    		<thead></thead>
-		    		<tbody>
-		    			<tr>
-		    				<td><button name="ListaUsu" value="ListaUsu">Listado de Usuarios</button></td>
-		    			</tr>
-		    			<tr>
-		    				<td><button name="ListaCli" value="ListaCLi">Listado de Clientes</button></td>
-		    			</tr>
-		    			<tr>
-		    				<td><button name="ListaVen" value="ListaVen">Ventas por Cliente</button></td>
-		    			</tr>
-		    		</tbody>
-		    		<tfoot></tfoot>
-		    	</table>
+		    	<form action="./ReportesServlet">
+			    	<table>
+			    		<thead></thead>
+			    		<tbody>
+			    			<tr>
+			    				<td><button name="consulUSU" value="consulUSU">Listado de Usuarios</button></td>
+			    			</tr>
+			    			<tr>
+			    				<td><button name="consulCLI" value="consulCLI">Listado de Clientes</button></td>
+			    			</tr>
+			    			<tr>
+			    				<td><button name="consulVEN" value="consulVEN">Ventas por Cliente</button></td>
+			    			</tr>
+			    		</tbody>
+			    		<tfoot></tfoot>
+			    	</table>
+		    	</form>
 		    </li>
 		  </ul>
 		  <script>(function() { easyTabs(); })();</script>
