@@ -68,13 +68,12 @@ public class UsuariosServlet extends HttpServlet {
 		}
     }
     
-    public void eliminarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException  {
+    public void eliminarUsuario(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	Long id = Long.parseLong(request.getParameter("cedula"));
     	int respuesta = 0;
     	try {
     		respuesta = UsuariosJSON.deleteJSON(id);
     		PrintWriter writer = response.getWriter();
-    		writer.println(respuesta);
     		if (respuesta == 200) {
     			writer.println("Usuario eliminado");
     		} else {
@@ -101,20 +100,14 @@ public class UsuariosServlet extends HttpServlet {
 		String con = request.getParameter("password");
 		if (crear != null && !usu.isEmpty() && !con.isEmpty() && !ema.isEmpty() && !nom.isEmpty() && !ced.isEmpty()) {
 			crearUsuario(request, response);
-		} else {
-			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
 		}		
 		
-		if (actua != null && !usu.isEmpty() && !ced.isEmpty()) {
+		if (actua != null && !ced.isEmpty()) {
 			actualizarUsuario(request, response);
-		} else {
-			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
 		}
 		
 		if (elimi != null && !ced.isEmpty()) {
 			eliminarUsuario(request, response);
-		} else {
-			request.getRequestDispatcher("/errorPage2.jsp").forward(request, response);
 		}
 	}
 

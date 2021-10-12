@@ -61,21 +61,21 @@
 			    </form>			    
 		    </li>
 		    <li class="t-content">
-		    	<form method="get" action="">
+		    	<form method="get" action="./ClientesServlet">
 			    	<table>
 			    		<thead></thead>
 			    		<tbody>
 				    		<tr>
-				    			<td><label for="cedula2">Cédula:</label></td>
-				    			<td><input type="number" name="cedula2" id="cedula2"></td>
+				    			<td><label for="cedula">Cédula:</label></td>
+				    			<td><input type="number" name="cedula" id="cedula"></td>
 				    			<td><label for="telefono">Teléfono:</label></td>
 				    			<td><input type="number" name="telefono" id="telefono"></td>
 				    		</tr>
 				    		<tr>
-				    			<td><label for="nombre2">Nombre Completo:</label></td>
-				    			<td><input name="nombre2" id="nombre2"></td>
-				    			<td><label for="correo2">Correo Electrónico:</label></td>
-				    			<td><input name="email" id="correo2"></td>
+				    			<td><label for="nombre">Nombre Completo:</label></td>
+				    			<td><input name="nombre" id="nombre"></td>
+				    			<td><label for="correo">Correo Electrónico:</label></td>
+				    			<td><input type="email" name="email" id="correo"></td>
 				    		</tr>
 				    		<tr>
 				    			<td><label for="direccion">Dirección:</label></td>
@@ -87,7 +87,7 @@
 								<td><button name="consultar" value="consultar">Consultar</button></td>
 								<td><button name="crear" value="crear">Crear</button></td>
 								<td><button name="actualizar" value="actualizar">Actualizar</button></td>
-								<td><button name="borrar" value="eliminar">Borrar</button></td>
+								<td><button name="eliminar" value="eliminar">Borrar</button></td>
 								<td><button type="reset">Cancelar</button></td>
 							</tr>
 						</tfoot>
@@ -95,25 +95,25 @@
 			    </form>
 		    </li>
 		    <li class="t-content">
-		    	<form method="get" action="">
+		    	<form method="get" action="./ProveedoresServlet">
 			    	<table>
 			    		<thead></thead>
 			    		<tbody>
 				    		<tr>
 				    			<td><label for="nit">NIT:</label></td>
 				    			<td><input name="nit" id="nit"></td>
-				    			<td><label for="telefono2">Teléfono:</label></td>
-				    			<td><input name="telefono2" id="telefono2"></td>
+				    			<td><label for="telefono">Teléfono:</label></td>
+				    			<td><input name="telefono" id="telefono"></td>
 				    		</tr>
 				    		<tr>
-				    			<td><label for="nombreP">Nombre Proveedor:</label></td>
-				    			<td><input name="nombreP" id="nombreP"></td>
+				    			<td><label for="nombre">Nombre Proveedor:</label></td>
+				    			<td><input name="nombre" id="nombre"></td>
 				    			<td><label for="ciudad">Ciudad:</label></td>
 				    			<td><input name="ciudad" id="ciudad"></td>
 				    		</tr>
 				    		<tr>
-				    			<td><label for="direccion2">Dirección:</label></td>
-				    			<td><input name="direccion2" id="direccion2"></td>
+				    			<td><label for="direccion">Dirección:</label></td>
+				    			<td><input name="direccion" id="direccion"></td>
 				    		</tr>
 				    	</tbody>
 			    		<tfoot>
@@ -121,7 +121,7 @@
 				    			<td><button name="consultar" value="consultar">Consultar</button></td>
 								<td><button name="crear" value="crear">Crear</button></td>
 								<td><button name="actualizar" value="actualizar">Actualizar</button></td>
-								<td><button name="borrar" value="eliminar">Borrar</button></td>
+								<td><button name="eliminar" value="eliminar">Borrar</button></td>
 								<td><button type="reset">Cancelar</button></td>
 							</tr>
 						</tfoot>

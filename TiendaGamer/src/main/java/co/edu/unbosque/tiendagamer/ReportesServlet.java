@@ -37,6 +37,19 @@ public class ReportesServlet extends HttpServlet {
 			e.printStackTrace();
 		}
     }
+    
+    public void consultarClientes(HttpServletRequest request, HttpServletResponse response) {
+    	try {
+			ArrayList<Clientes> lista = ClientesJSON.getJSON();
+			String pagina = "/pagClientes.jsp";
+			request.setAttribute("lista", lista);
+			RequestDispatcher dispatcher = getServletContext().getRequestDispatcher(pagina);
+			dispatcher.forward(request, response);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+    }
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -44,8 +57,13 @@ public class ReportesServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String consul = request.getParameter("consulUSU");
+		String consul2 = request.getParameter("consulCLI");
 		if (consul != null) {
 			consultarUsuarios(request, response);
+		}
+		
+		if (consul2 != null) {
+			consultarClientes(request, response);
 		}
 	}
 
