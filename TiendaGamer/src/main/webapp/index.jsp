@@ -129,14 +129,13 @@
 			    </form>
 		    </li>
 		    <li class="t-content">
-		    	<form method="get" action="">
+		    	<form method="get" action="./ProductosServlet">
 		    		<table>
 		    			<thead></thead>
 		    			<tbody>
 			    			<tr>
 			    				<td><label>Nombre del Archivo:</label></td>
-			    				<td><input name="archivo"></td>
-			    				<td><button name="examinar" value="examinar">Examinar</button></td>
+			    				<td><input type="file" name="archivo"></td>
 			    			</tr>
 			    		</tbody>
 			    		<tfoot>
